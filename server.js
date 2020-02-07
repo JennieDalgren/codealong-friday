@@ -30,58 +30,58 @@ mongoose.Promise = Promise
 // if (process.env.RESET_DB) {
 //   console.log('Resetting database!')
 
-const seedDatabase = async () => {
-  await Pokemon.deleteMany()
-  await Team.deleteMany()
+// const seedDatabase = async () => {
+//   await Pokemon.deleteMany()
+//   await Team.deleteMany()
 
-  const flamez = new Team({
-    name: 'The Flamez',
-    members: 21,
-    color: 'orange',
-    location: 'Jupiter'
-  })
-  await flamez.save()
+//   const flamez = new Team({
+//     name: 'The Flamez',
+//     members: 21,
+//     color: 'orange',
+//     location: 'Jupiter'
+//   })
+//   await flamez.save()
 
-  const magic = new Team({
-    name: 'Magic Team',
-    members: 10,
-    color: 'purple',
-    location: 'Venus'
-  })
-  await magic.save()
+//   const magic = new Team({
+//     name: 'Magic Team',
+//     members: 10,
+//     color: 'purple',
+//     location: 'Venus'
+//   })
+//   await magic.save()
 
-  const superTeam = new Team({
-    name: 'Super Team',
-    members: 33,
-    color: 'yellow',
-    location: 'The Moon'
-  })
-  await superTeam.save()
+//   const superTeam = new Team({
+//     name: 'Super Team',
+//     members: 33,
+//     color: 'yellow',
+//     location: 'The Moon'
+//   })
+//   await superTeam.save()
 
-  const pika = new Pokemon({
-    name: 'Pikachu',
-    type: 'electric',
-    isCute: true,
-    team: superTeam
-  })
-  await pika.save()
+//   const pika = new Pokemon({
+//     name: 'Pikachu',
+//     type: 'electric',
+//     isCute: true,
+//     team: superTeam
+//   })
+//   await pika.save()
 
-  const bulba = new Pokemon({
-    name: 'Bulbasaur',
-    type: 'grass',
-    isCute: true,
-    team: magic
-  })
-  await bulba.save()
+//   const bulba = new Pokemon({
+//     name: 'Bulbasaur',
+//     type: 'grass',
+//     isCute: true,
+//     team: magic
+//   })
+//   await bulba.save()
 
-  await new Pokemon({
-    name: 'Charmander',
-    type: 'fire',
-    isCute: false,
-    team: flamez
-  }).save()
-}
-seedDatabase()
+//   await new Pokemon({
+//     name: 'Charmander',
+//     type: 'fire',
+//     isCute: false,
+//     team: flamez
+//   }).save()
+// }
+// seedDatabase()
 // }
 
 // Defines the port the app will run on. Defaults to 8080, but can be
